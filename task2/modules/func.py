@@ -1,9 +1,9 @@
 import random
 
-def Find_Index(my_list, min, max):
+def Find_Index(my_list, minimum, maximum):
     range_list = []
     for i in range(len(my_list)):
-        if my_list[i] > min and my_list[i] < max:
+        if my_list[i] >= minimum and my_list[i] <= maximum:
             range_list.append(i)
             print()
             print("Индекс элемента в заданном диапозоне: ", '[', i, ']', my_list[i])
@@ -14,6 +14,5 @@ def FillRnd():
     my_list = []
     for i in range(1,10):
         my_list.append(random.randint(1,10))
-    my_list.sort()
     print()
     return my_list
